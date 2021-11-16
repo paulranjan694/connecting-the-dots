@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 30px;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+#first {
+  background-color: red;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#second {
+  background-color: yellow;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#third {
+  background-color: #03a9f4;
+  bottom: 0;
+  right: 0;
+  z-index: 998;
+}
+
+#fourth {
+  background-color: #045804;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
+}
+
+.btn-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+
+.btn {
+  background-color: #076c6c;
+  padding: 3px 15px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* for direction */
+@keyframes horizontal {
+  0%,
+  100% {
+    width: 50px;
+  }
+  50% {
+    width: 180px;
+  }
+}
+
+@keyframes vertical {
+  0%,
+  100% {
+    height: 50px;
+  }
+  50% {
+    height: 180px;
+  }
+}
+
+/* for color change */
+@keyframes right-color {
+  0%{
+    background-color: red;
+  }
+  15% {
+    background-color: #ff8000;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes down-color {
+  0%{
+    background-color: yellow;
+  }
+  15% {
+    background-color: #81d47a;
+  }
+  50% {
+    background-color: #03a9f4;
+  }
+  100% {
+    background-color: #03a9f4;
+  }
+}
+
+@keyframes left-color {
+  0%{
+    background-color: #03a9f4;
+  }
+  15% {
+    background-color: #04817c;
+  }
+  50%,
+  100% {
+    background-color: #045804;
+  }
+}
+
+@keyframes top-color {
+  0%{
+    background-color: #045804;
+  }
+  15% {
+    background-color: #822c02;
+  }
+  50%,
+  100% {
+    background-color: red;
+  }
+}
