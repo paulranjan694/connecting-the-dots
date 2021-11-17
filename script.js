@@ -8,6 +8,7 @@ const second = document.getElementById("second");
 const third = document.getElementById("third");
 const fourth = document.getElementById("fourth");
 
+stop.disabled = true;
 
 let setIntervalid;
 // storing different animation name, responsible for changing the color
@@ -18,10 +19,14 @@ const ANIMATION_DURATION = 2.5;
 const btnDisabled = (value)=>{
     if(value){
         start.disabled = true;
-        start.style.cursor="not-allowed";
+        stop.disabled = false;
+        start.classList.add("disable");
+        stop.classList.remove("disable");
     }else{
         start.disabled = false;
-        start.style.cursor="pointer";
+        start.classList.remove("disable");
+        stop.disabled = true;
+        stop.classList.add("disable");
     }
 }
 

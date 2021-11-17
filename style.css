@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 .box {
@@ -139,4 +139,11 @@
   100% {
     background-color: red;
   }
+}
+
+/* disable the button */
+.disable{
+  cursor: not-allowed;
+  background-color: lightgray;
+  color: #8f8f8f;
 }
